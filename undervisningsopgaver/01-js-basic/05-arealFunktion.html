@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        let længde = prompt("Angiv længde");
+        let bredde = prompt("Angiv bredde");
+
+        /*Lav en funktion, areal, som med længde og
+bredde som parametre, kan udregne et areal,
+og returnere resultatet.*/
+        //let areal = længde * bredde;
+
+        function areal(l, b) {
+            return (l * b);
+        }
+        let resultat = `Arealet er ${areal(længde, bredde)}. Har du brug for et nyt areal?`
+
+        confirm(resultat);
+
+        if (confirm) {
+            location.reload();
+        }
+
+        //console.log(resultat);
+    </script>
+</body>
+
+</html>
