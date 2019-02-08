@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div id="liste">
+
+    </div>
+
+
+    <script>
+        let alleBegivenheder = [{
+                "navn": "Danmarks Naturfredningsforening søger affaldshelte for en dag!",
+                "beskrivelse": "Søndag d. 31. marts er der Affaldsindsamling i hele Danmark. Den årlige indsamling lever af lokale ildsjæle, der for en dag skifter sofaen ud med affaldssækken. Skal du være affaldshelt?",
+                "billede": "https://dit-roskilde.dk/2019/02/danmarks-naturfredningsforening-soeger-affaldshelte-for-en-dag/",
+                "dato": "5. februar 2019"
+            },
+            {
+                "navn": "Nu er rehabiliteringsophold gratis",
+                "beskrivelse": "Nogle borgere har brug for intensiv pleje og genoptræning, når de bliver udskrevet fra et hospitalsophold. Det har hidtil kostet dem 137,50 kr. i døgnet. Fra 1. februar 2019 er det blevet gratis.",
+                "billede": "https://dit-roskilde.dk/2019/02/nu-er-rehabiliteringsophold-gratis/",
+                "dato": "1. februar 2019"
+            },
+            {
+                "navn": "Skolevalg 2019: Flertal til rød blok i Roskilde Kommune",
+                "beskrivelse": "860 elever i 8. og 9. klasse på ni folkeskoler i Roskilde Kommune har ved Skolevalg 2019 givet er klart flertal til rød blok – modsat landsresultatet, hvor blå blok løber af med sejren. Det oplyses i en pressemeddelse.",
+                "billede": "https://dit-roskilde.dk/2019/02/skolevalg-2019-flertal-til-roed-blok-i-roskilde-kommune/",
+                "dato": "1. februar 2019"
+            },
+            {
+                "navn": "Den gladeste opvasker søges",
+                "beskrivelse": "Har du helt styr på, hvordan tallerkenerne skal stables? Og er du Roskildes gladeste opvasker ml. 15 og 18 år? Så er det dig, Slagter Frimann søger!",
+                "billede": "https://dit-roskilde.dk/2019/02/den-gladeste-opvasker-soeges/",
+                "dato": "1. februar 2019"
+            },
+            {
+                "navn": "Okse i rødvin på en kold vinteraften",
+                "beskrivelse": "Nogen gange er det lækkert med det enkle køkken, med meget få ingredienser i maden. Duften af rødvin, det brunede oksekød og urterne som breder sig i ens hjem, er bare utroligt lækkert. Chef Aagaard har en lækker vinteropskrift klar til jer.",
+                "billede": "https://dit-roskilde.dk/2019/02/okse-i-roedvin-paa-en-kold-vinteraften/",
+                "dato": "1. februar 2019"
+            }
+
+        ];
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            let dest = document.querySelector("#liste");
+
+            function visBegivenheder() {
+                alleBegivenheder.forEach(begivenheder => {
+                    dest.innerHTML += `
+                <div class="begivenheder">
+                    <h3>${begivenheder.navn}<h3>
+                    <p>Beskrivelse: ${begivenheder.beskrivelse}<p>
+                    <img src= "${begivenheder.billede}">
+                <p>Dato: ${begivenheder.dato}<p>
+                <div> `;
+                })
+            }
+            visBegivenheder();
+
+        }
+    </script>
+</body>
+
+</html>
