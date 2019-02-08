@@ -29,6 +29,7 @@
         img {
             width: 50%;
         }
+
     </style>
 
 
@@ -61,7 +62,7 @@
                 <div class="person">
                     <h2>${person.navn}<h2>
                     <img src= "${person.billede}">
-                <p>Github: ${person.github}<p>
+                <p>Github: ${person.github} <a href ="https://github.com/${person.github}">Github</a></p>
                 <p>Alder: ${person.alder}<p>
                 <p>Køn: ${person.køn}<p>
                 <p>Email: ${person.email}<p>
@@ -73,11 +74,8 @@
 
             getJson();
         }
+
     </script>
 </body>
 
 </html>
-
-
-
-
