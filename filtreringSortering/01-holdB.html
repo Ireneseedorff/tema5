@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        #liste {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 10px 50px 10px 50px
+        }
+
+        .person {
+            border: solid 2px;
+            background-color: lightgray;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        img {
+            width: 50%;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div id="liste">
+
+    </div>
+
+
+    <script>
+        let allePersoner = [];
+        let filter = "b";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            let dest = document.querySelector("#liste");
+
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1OLlD_GRoz71piHvnW306omRAyHS7vtLOILQt-K0YF_c");
+                allePersoner = await jsonData.json();
+                visPersoner();
+            }
+
+            function visPersoner() {
+                allePersoner.forEach(person => {
+                    if (person.hold == filter) {
+                        dest.innerHTML += `
+                <div class="person">
+                    <h2>${person.navn}<h2>
+                    <img src= "${person.billede}">
+                <p>Github: ${person.github} <a href ="https://github.com/${person.github}">Github</a></p>
+                <p>Alder: ${person.alder}<p>
+                <p>Køn: ${person.køn}<p>
+                <p>Email: ${person.email}<p>
+                <p>Hold: ${person.hold}<p>
+                <p>Historie: ${person.historie}<p>
+                <div> `;
+                    }
+
+                })
+            }
+
+            getJson();
+        }
+
+    </script>
+</body>
+
+</html>
