@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro Babushka</title>
+    <link rel="stylesheet" href="">
+    <style>
+        #liste {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 10px 50px 10px 50px
+        }
+
+        .retter {
+            background-color: white;
+            margin: 5px;
+            padding: 10px;
+
+        }
+
+        .ret:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        p {
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+
+        .knapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .valgt {
+            background-color: red;
+        }
+
+        .overskrift {
+            text-align: center;
+        }
+
+        footer {
+            background-color: grey;
+            color: white;
+
+        }
+
+        .logo img {
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .knapper {
+            margin-top: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="bistro_logo.png" alt="logo"></div>
+        <nav class="knapper">
+
+            <button class="filter valgt" data-hold="alle">Alle</button>
+            <button class="filter" data-hold="forretter">Forretter</button>
+            <button class="filter" data-hold="hovedretter">Hovedretter</button>
+            <button class="filter" data-hold="desserter">Desserter</button>
+            <button class="filter" data-hold="drikkevarer">Drikkevarer</button>
+            <button class="filter" data-hold="sideorders">Side Orders</button>
+
+        </nav>
+        <h1 class="overskrift">Menu</h1>
+    </header>
+    <main>
+
+        <section id="liste">
+            <article class="retter"></article>
+            <article class="retter"></article>
+            <article class="retter"></article>
+            <article class="retter"></article>
+        </section>
+    </main>
+    <footer>
+        Addresse: <br> Grønnegade 97 <br> 1234 København K
+
+    </footer>
+
+    <script>
+        let alleRetter = [];
+        let filter = "alle";
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            let dest = document.querySelector("#liste");
+
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1jxxxFoWBuMJ1qhQ9BQIAyKHmP38XtAF9_sQr0xo5JLo");
+                alleRetter = await jsonData.json();
+                //               alleRetter.sort((forretter, hovedretter, desserter, drikkevarer, sideorders) => {
+                // return forretter.navn.localeCompare(hovedretter.navn, desserter.navn, drikkevarer.navn, sideorders.navn);
+                // })
+                visRetter();
+            }
+
+            function visRetter() {
+                dest.innerHTML = "";
+                alleRetter.forEach(retter => {
+                    console.log(retter.navn)
+                    if (filter == "alle" || filter == retter.kategori) {
+
+                        dest.innerHTML += `
+                <div class="retter">
+                    <img src="imgs/small/${retter.billede}-sm.jpg">
+                    <h2>${retter.navn}<h2>
+                <p>${retter.kort}<p>
+                <p>Pris: ${retter.pris},-<p>
+                    </div>
+                    `;
+                    }
+
+                })
+            } //function visPersoner slut
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+
+            function filtrering() {
+                filter = this.getAttribute("data-hold");
+                document.querySelector("h1").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                visRetter();
+            }
+
+            getJson();
+        }
+    </script>
+</body>
+
+</html>
