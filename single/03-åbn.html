@@ -14,7 +14,6 @@
         }
 
         .person {
-            border: solid 2px;
             background-color: lightgray;
             margin: 5px;
             padding: 10px;
@@ -48,7 +47,7 @@
             height: 100vh;
             position: fixed;
             background-color: red;
-            display: none;
+           display: none;
 
         }
 
@@ -68,6 +67,9 @@
 
         #luk button {
             font-size: 2em;
+        }
+        img.billede {
+            width: 40%;
         }
     </style>
 
@@ -124,17 +126,28 @@
                 allePersoner.forEach(person => {
                     if (filter == "alle" || filter == person.hold) {
 
-                        dest.innerHTML += `
-                <div class="person">
-                    <h2>${person.navn}<h2>
-                    <img src= "${person.billede}">
-                <p>Github: ${person.github} <a href ="https://github.com/${person.github}">Github</a></p>
-                <p>Alder: ${person.alder}<p>
-                <p>Køn: ${person.køn}<p>
-                <p>Email: ${person.email}<p>
-                <p>Hold: ${person.hold}<p>
-                <p>Historie: ${person.historie}<p>
-                <div> `;
+                        let template = `
+                            <article class="person">
+                <h2>${person.navn}</h2>
+                    <img class="billede" src="${person.billede}" alt="${person.navn}>
+                <p>Github: <a href="https://github.com/${person.github}" target="_blank">${person.github}</a></p>
+                    <p>Hold: ${person.hold}, Alder: ${person.alder}</p>
+                </article> `;
+                        dest.insertAdjacentHTML("beforeend", template);
+                        dest.lastElementChild.addEventListener("click", åbn);
+
+                        function åbn(){
+                            document.querySelector("#indhold").innerHTML= `
+                               <article>
+<h2>${person.navn}</h2>
+                    <img class="billede" src="${person.billede}" alt="${person.navn}">
+<p>Hold: ${person.hold}, Alder: ${person.alder}</p>
+                <h3>${person.navn}'s historie</h3>
+
+<p>Historie: ${person.historie}</p>
+                </article> `;
+                            document.querySelector("#popup").style.display="block";
+                        }
                     }
 
                 })
