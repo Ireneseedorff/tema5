@@ -10,7 +10,9 @@
         #liste {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            margin: 10px 50px 10px 50px
+            margin: 10px 50px 10px 50px;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .retter {
@@ -20,7 +22,7 @@
 
         }
 
-        .ret:nth-child(odd) {
+        .retter:nth-child(odd) {
             background-color: lightgray;
         }
 
@@ -47,8 +49,11 @@
         footer {
             background-color: grey;
             color: white;
-
+            padding: 5px;
+            padding-left: 55px;
         }
+
+
 
         .logo img {
             display: block;
@@ -89,11 +94,12 @@
             <article class="retter"></article>
             <article class="retter"></article>
             <article class="retter"></article>
-            <article class="retter"></article>
+
         </section>
     </main>
     <footer>
-        Addresse: <br> Grønnegade 97 <br> 1234 København K
+        <p>Addresse: <br> Grønnegade 97 <br> 1234 København K</p>
+        <p>Åbningstider: <br> Mandag - fredag 10:30 - 22:00 <br> Lørdag 12:00 - 23:00</p>
 
     </footer>
 
