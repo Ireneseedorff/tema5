@@ -100,13 +100,15 @@
                         let template = `
                             <article class="person">
                 <h2>${person.navn}</h2>
+
                     <img class="billede" src="${person.billede}" alt="${person.navn}>
+
                 <p>Github: <a href="https://github.com/${person.github}" target="_blank">${person.github}</a></p>
                     <p>Hold: ${person.hold}, Alder: ${person.alder}</p>
                 </article> `;
                         dest.insertAdjacentHTML("beforeend", template);
                         dest.lastElementChild.addEventListener("click", ()=>{
-                            location.href="06-single.html?github="+person.github;
+                            location.href="07-singleView.html?github="+person.github;
                         });
                     }
 

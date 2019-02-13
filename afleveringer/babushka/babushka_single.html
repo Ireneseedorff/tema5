@@ -138,14 +138,18 @@
                     console.log(retter.navn)
                     if (filter == "alle" || filter == retter.kategori) {
 
-                        dest.innerHTML += `
-                <div class="retter">
+                        let template = `
+                <article class="retter">
                     <img src="imgs/small/${retter.billede}-sm.jpg" alt="${retter.navn}">
                     <h2>${retter.navn}</h2>
-                <p>${retter.kort}</p>
+                    <p>${retter.kort}</p>
                 <p>Pris: ${retter.pris},-</p>
-                    </div>
+                    </article>
                     `;
+                dest.insertAdjacentHTML("beforeend",template);
+                        dest.lastElementChild.addEventListener("click",()=>{
+                            location.href="babushka_singleview.html?id"+retter.id;
+                        })
                     }
 
                 })
