@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro Babushka</title>
+    <link rel="stylesheet" href="">
+    <style>
+
+        html, body *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #singleview {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(255, 140, 0);
+
+        }
+        #indhold {
+            box-sizing: border-box;
+            background-color: lightgrey;
+            width: 90vw;
+            height: 90vh;
+            margin: auto;
+        }
+
+        #tilbage {
+            box-sizing: border-box;
+            text-align: right;
+            padding-right: 1em;
+        }
+
+        #tilbage button {
+            font-size: 2em;
+        }
+
+        h2, p, img {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+   <div id="singleview">
+   <div id="tilbage"><button>X</button></div>
+        <div id="indhold"></div>
+    </div>
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search)
+        let id = urlParams.get("id");
+        let alleRetter;
+        let retter;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1jxxxFoWBuMJ1qhQ9BQIAyKHmP38XtAF9_sQr0xo5JLo");
+                alleRetter = await jsonData.json();
+                alleRetter.forEach(obj =>{
+                        if(obj.id==id){
+                            retter=obj;
+                        }
+                    })
+                åbn();
+            }
+
+                    function åbn(){
+                        document.querySelector("#indhold").innerHTML=`
+                         <article class="retter">
+                    <h2>${retter.navn}</h2>
+                    <img class="billede" src="imgs/small/${retter.billede}-sm.jpg" alt="${retter.navn}"><br>
+
+            <p>${retter.lang} <br> Oprindelse: ${retter.oprindelse}</p>
+                <br><p>Pris: ${retter.pris},-</p>
+                    </article>
+                    `;
+
+                    }
+            document.querySelector("#tilbage button").addEventListener("click",()=>{
+                location.href="babushka_singleview.html"
+            })
+            //function visPersoner slut
+
+            getJson();
+        }
+    </script>
+</body>
+
+</html>

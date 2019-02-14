@@ -13,6 +13,7 @@
             margin: 10px 50px 10px 50px;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .retter {
@@ -63,6 +64,10 @@
 
         body {
             margin: 0;
+/*
+            display: flex;
+            justify-content:center ;
+*/
         }
 
         .knapper {
@@ -76,24 +81,29 @@
         }
 
         .footer1 p {
-             margin-right: 6rem;
+            margin-right: 6rem;
 
         }
 
         #popup {
-            width: 100vw;
-            height: 100vh;
+            width: 60vw;
+            height: 90vh;
             position: fixed;
             background-color: rgb(255, 140, 0);
             display: none;
+            left: 20vw;
+            top: 3vw;
+
 
         }
+
         #indhold {
             box-sizing: border-box;
             background-color: lightgrey;
-            width: 90vw;
-            height: 90vh;
+            width: 55vw;
+            height: 80vh;
             margin: auto;
+
         }
 
         #luk {
@@ -105,15 +115,14 @@
         #luk button {
             font-size: 2em;
         }
-
     </style>
 
 
 </head>
 
 <body>
-   <div id="popup">
-   <div id="luk"><button>X</button></div>
+    <div id="popup">
+        <div id="luk"><button>X</button></div>
         <div id="indhold"></div>
     </div>
     <header>
@@ -137,8 +146,10 @@
         </section>
     </main>
     <footer>
-       <div class="footer1"> <p>Addresse: <br> Grønnegade 97 <br> 1234 København K</p>
-        <p>Åbningstider: <br> Mandag - fredag 10:30 - 22:00 <br> Lørdag 12:00 - 23:00</p> </div>
+        <div class="footer1">
+            <p>Addresse: <br> Grønnegade 97 <br> 1234 København K</p>
+            <p>Åbningstider: <br> Mandag - fredag 10:30 - 22:00 <br> Lørdag 12:00 - 23:00</p>
+        </div>
 
     </footer>
 
@@ -176,10 +187,11 @@
                 <p>Pris: ${retter.pris},-</p>
                     </article>
                     `;
-                dest.insertAdjacentHTML("beforeend",template);
+                        dest.insertAdjacentHTML("beforeend", template);
                         dest.lastElementChild.addEventListener("click", åbn);
-                    function åbn(){
-                        document.querySelector("#indhold").innerHTML=`
+
+                        function åbn() {
+                            document.querySelector("#indhold").innerHTML = `
                          <article class="retter">
                     <img src="imgs/small/${retter.billede}-sm.jpg" alt="${retter.navn}">
                     <h2>${retter.navn}</h2>
@@ -187,14 +199,14 @@
                 <p>Pris: ${retter.pris},-</p>
                     </article>
                     `;
-                        document.querySelector("#popup").style.display="block";
-                    }
+                            document.querySelector("#popup").style.display = "block";
+                        }
                     }
 
                 })
             } //function visPersoner slut
-            document.querySelector("#luk button").addEventListener("click",()=>{
-                document.querySelector("#popup").style.display="none";
+            document.querySelector("#luk button").addEventListener("click", () => {
+                document.querySelector("#popup").style.display = "none";
             })
             document.querySelectorAll(".filter").forEach(elm => {
                 elm.addEventListener("click", filtrering);
