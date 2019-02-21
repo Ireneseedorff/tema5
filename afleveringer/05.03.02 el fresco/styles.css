@@ -26,7 +26,7 @@ header nav {
     margin-right: 3vw;       
 }
 
-.indhold a {
+#menu a {
     text-decoration: none; 
     margin-right: 2vw; 
     color: #3f3fe6;
@@ -34,7 +34,7 @@ header nav {
     font-size: 1rem;
 }
 
-.indhold a:hover {
+#menu a:hover {
     color: #b44647;
 }
 
@@ -86,5 +86,18 @@ footer div {
 .menu-button img{
     width: 30px;;
     float: right;
+    top: -10px;
    
 }
+.hide {
+    visibility: hidden;
+}
+
+
+
+@media only screen and (max-width:910px) {
+    
+}
+
+
+
