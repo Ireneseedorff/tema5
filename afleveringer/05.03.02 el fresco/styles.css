@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+p {
+   font-family: helvetica;
+    font-size: 1rem; 
+}
+.splash {
+    max-width: none;
+    width: 100%;
+    z-index: 1;
+}
+
+
+header img {
+    width: 30%;
+    margin-left: 4vw; 
+    margin-top: 3vw;
+}
+
+header nav {
+    float: right; 
+    margin-top: 7vw;
+    margin-right: 3vw;       
+}
+
+.indhold a {
+    text-decoration: none; 
+    margin-right: 2vw; 
+    color: #3f3fe6;
+    font-family: helvetica;
+    font-size: 1rem;
+}
+
+.indhold a:hover {
+    color: #b44647;
+}
+
+    .forside {
+    background-color: #fafafa;
+        height: 55vw; 
+    background-image: url("materiale/splashbillede.jpg");
+        background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.citat {
+    margin: 10vw;
+    text-align: center;
+}
+
+.citat p {
+    font-family: helvetica;
+    font-style: italic;
+}
+
+.billede_forside {
+
+}
+    
+.billede_forside img {
+    width: 100%;
+   
+}
+    
+footer {
+    background-color: #f4d7d7; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px;
+}
+h5 {
+    font-family: 
+}
+footer p {
+    font-size: 0.7rem;
+}
+
+footer div {
+    margin-right: 60px; 
+}
+
+.menu-button img{
+    width: 30px;;
+    float: right;
+   
+}
