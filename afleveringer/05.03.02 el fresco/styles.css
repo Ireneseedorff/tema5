@@ -18,12 +18,17 @@ header img {
     width: 30%;
     margin-left: 4vw; 
     margin-top: 3vw;
+    padding-bottom: 5vw; 
 }
 
 header nav {
     float: right; 
     margin-top: 7vw;
     margin-right: 3vw;       
+}
+
+header { 
+  background-color: #fafafa;
 }
 
 #menu a {
@@ -38,7 +43,7 @@ header nav {
     color: #b44647;
 }
 
-    .forside {
+.forside {
     background-color: #fafafa;
         height: 55vw; 
     background-image: url("materiale/splashbillede.jpg");
@@ -93,7 +98,70 @@ footer div {
     visibility: hidden;
 }
 
+/** MENU SIDE **/
+#liste {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 10px 50px 10px 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
+        .ret {
+            background-color: white;
+            margin: 5px;
+            padding: 10px;
+
+        }
+
+        .retter:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+
+        .knapper {
+            display: flex;
+            justify-content: center;
+             margin-top: 20px;
+        }
+
+        .valgt {
+            background-color: #3f3fe6;
+        }
+
+
+        #popup {
+            width: 60vw;
+            height: 90vh;
+            position: fixed;
+            background-color: rgb(255, 140, 0);
+            display: none;
+            left: 20vw;
+            top: 3vw;
+        }
+
+        #indhold {
+            box-sizing: border-box;
+            background-color: lightgrey;
+            width: 55vw;
+            height: 80vh;
+            margin: auto;
+        }
+
+        #luk {
+            box-sizing: border-box;
+            text-align: right;
+            padding-right: 1em;
+        }
+
+        #luk button {
+            font-size: 2em;
+        }
+
+.ret img {
+    width: 60%;
+}
 
 @media only screen and (max-width:910px) {
     
