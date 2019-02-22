@@ -8,19 +8,28 @@
 </head>
 
 <body>
-  
-     
-     <header>
-      
-       <img class="logo" src="materiale/elfresco_logo.svg" alt="logo">
-       
-        <div id="popup">
-        <div id="luk"><button>X</button></div>
+  <div id="popup">
+        <div id="luk"><button><img src="materiale/crosssort.png" alt="luk"></button>
+        
+        
+        </div>
         <div id="indhold"></div>
     </div>
+     
+     <header>
+<!--         <h2 id="visRetter">En H2er</h2>-->
+         <a href="index.html"><img class="logo" src="materiale/elfresco_logo.svg" alt="logo"></a>
        
+        <nav class="knapper">
+            <button class="filter valgt" data-kategori="alle">All</button>
+            <button class="filter" data-kategori="forret">Starters</button>
+            <button class="filter" data-kategori="hovedret">Main Dishes</button>
+            <button class="filter" data-kategori="dessert">Desserts</button>
+            <button class="filter" data-kategori="drink">Drinks</button>
+        </nav>
+        
        <div class="menu-button">
-       <img src="materiale/burger.png" alt="menu">
+       <img src="materiale/sortburger.png" alt="menu">
        </div>
        
        <nav id="menu" class="hide">
@@ -30,15 +39,7 @@
            <a href="contact.html">CONTACT</a>
        </nav>
        
-       <nav class="knapper">
-
-            <button class="filter valgt" data-kategori="alle">All</button>
-            <button class="filter" data-kategori="forretter">Starters</button>
-            <button class="filter" data-kategori="hovedretter">Main Dishes</button>
-            <button class="filter" data-kategori="desserter">Desserts</button>
-            <button class="filter" data-kategori="drikkevarer">Drinks</button>
-        
-        </nav>
+       
         
    </header>
     <section id="liste">

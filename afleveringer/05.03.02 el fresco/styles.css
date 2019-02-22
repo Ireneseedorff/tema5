@@ -29,6 +29,7 @@ header nav {
 
 header { 
   background-color: #fafafa;
+    position: relative;
 }
 
 #menu a {
@@ -37,6 +38,7 @@ header {
     color: #3f3fe6;
     font-family: helvetica;
     font-size: 1rem;
+    display: inline-block; 
 }
 
 #menu a:hover {
@@ -60,13 +62,11 @@ header {
     font-family: helvetica;
     font-style: italic;
 }
-
-.billede_forside {
-
-}
-    
+  
 .billede_forside img {
     width: 100%;
+    margin: 0; 
+    padding: 0;
    
 }
     
@@ -78,7 +78,16 @@ footer {
     padding: 20px;
 }
 h5 {
-    font-family: 
+    font-family: helvetica;
+    font-size: 1rem;
+}
+
+h2 {
+    font-family: helvetica;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
 }
 footer p {
     font-size: 0.7rem;
@@ -88,31 +97,43 @@ footer div {
     margin-right: 60px; 
 }
 
+
+
 .menu-button img{
     width: 30px;;
     float: right;
     top: -10px;
+     margin-top: -12vw;
+    margin-right: 30px;
    
 }
 .hide {
     visibility: hidden;
 }
 
+.billede_forside {
+    margin: 0; 
+    padding: 0;
+}
+
 /** MENU SIDE **/
-#liste {
+
+        #liste {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             margin: 10px 50px 10px 50px;
+            grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+/*
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+*/
         }
 
-        .ret {
-            background-color: white;
-            margin: 5px;
-            padding: 10px;
-
+         .ret {
+        
+            
+            
         }
 
         .retter:nth-child(odd) {
@@ -124,10 +145,25 @@ footer div {
             display: flex;
             justify-content: center;
              margin-top: 20px;
+            
         }
 
+            .filter {
+            background: none; 
+            border: none;
+            font-family: helvetica;
+            font-size: 1rem;
+            text-transform: lowercase;
+                margin-left: 1vw;
+                cursor: pointer;
+            
+            }
+
+.filter:hover {
+    color: #3f3fe6
+}
         .valgt {
-            background-color: #3f3fe6;
+            color: #3f3fe6;
         }
 
 
@@ -135,15 +171,15 @@ footer div {
             width: 60vw;
             height: 90vh;
             position: fixed;
-            background-color: rgb(255, 140, 0);
+            background-color: #f1f1f1;
             display: none;
             left: 20vw;
-            top: 3vw;
+            top: 2vw;
+            z-index: 1;
         }
 
         #indhold {
             box-sizing: border-box;
-            background-color: lightgrey;
             width: 55vw;
             height: 80vh;
             margin: auto;
@@ -153,19 +189,58 @@ footer div {
             box-sizing: border-box;
             text-align: right;
             padding-right: 1em;
+            
         }
-
-        #luk button {
-            font-size: 2em;
-        }
-
-.ret img {
-    width: 60%;
+#luk img {
+    width: 20%;
 }
 
-@media only screen and (max-width:910px) {
+#luk button {
+     font-size: 1em;
+    background: none; 
+            border: none;
+}
+
+.ret img {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.knapper {
+    position: absolute;
+    bottom: 0;
+    right: 2vw;
+}
+
+article.ret {
     
 }
 
+/** OVERLAY **/
+
+
+
+@media only screen and (min-width:910px) {
+    .menu-button {
+        display: none;
+    }
+    #menu.hide {
+        visibility: visible;
+    }
+
+}
+
+@media only screen and (max-width:910px) {
+    header {
+        height: 100px;
+    }
+    .logo {
+        width: 30vw;
+    }
+    .filter {
+        margin: auto;
+    }
+}
 
 

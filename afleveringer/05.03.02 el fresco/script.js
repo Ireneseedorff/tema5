@@ -15,10 +15,10 @@ function toggleMenu() {
 
     if (erSkjult == true) {
         //menuen er skjult - ændr menuknap til lll
-        document.querySelector(".menu-button img").src = "materiale/burger.png";
+        document.querySelector(".menu-button img").src = "materiale/sortburger.png";
     } else {
         //menuen er nu vist - ændr menuknap til X
-        document.querySelector(".menu-button img").src = "materiale/cancel.png";
+        document.querySelector(".menu-button img").src = "materiale/crosssort.png";
     }
 }
 
@@ -43,11 +43,12 @@ function toggleMenu() {
             }
 
             function visRetter() {
+                console.log("VIS RETTER");
                 dest.innerHTML = "";
                 alleRetter.forEach(ret => {
-                    console.log(ret.titel)
+                    //console.log(ret.titel)
                     if (filter == "alle" || filter == ret.kategori) {
-
+                            
                         let template = `
                             <article class="ret">
                             <img src="elfresco_mad/${ret.billede}.jpg" alt="${ret.titel}">
@@ -81,7 +82,8 @@ function toggleMenu() {
 
             function filtrering() {
                 filter = this.getAttribute("data-kategori");
-                document.querySelector("h2").textContent = this.textContent;
+                console.log("FILTER",filter);
+//                document.querySelector("h2").textContent = this.textContent;
                 document.querySelectorAll(".filter").forEach(elm => {
                     elm.classList.remove("valgt");
                 })
