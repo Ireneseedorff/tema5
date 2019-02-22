@@ -5,7 +5,8 @@ body {
 
 p {
    font-family: helvetica;
-    font-size: 1rem; 
+    font-size: 0.9rem; 
+    line-height: 1.6;
 }
 .splash {
     max-width: none;
@@ -30,6 +31,7 @@ header nav {
 header { 
   background-color: #fafafa;
     position: relative;
+    
 }
 
 #menu a {
@@ -38,8 +40,10 @@ header {
     color: #3f3fe6;
     font-family: helvetica;
     font-size: 1rem;
-    display: inline-block; 
+    display: inline-block;
+    margin-top: 0.9vw;
 }
+
 
 #menu a:hover {
     color: #b44647;
@@ -56,6 +60,9 @@ header {
 .citat {
     margin: 10vw;
     text-align: center;
+    font-size: 2rem;
+    color: #0c0c0c;
+    font-style:italic;
 }
 
 .citat p {
@@ -88,22 +95,21 @@ h2 {
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+    
 }
 footer p {
     font-size: 0.7rem;
+     
 }
-
-footer div {
-    margin-right: 60px; 
+footer p,h5 {
+    margin-left: 2.2vw;
 }
-
-
 
 .menu-button img{
-    width: 30px;;
+    width: 35px;
     float: right;
     top: -10px;
-     margin-top: -12vw;
+    margin-top: -12vw;
     margin-right: 30px;
    
 }
@@ -115,6 +121,8 @@ footer div {
     margin: 0; 
     padding: 0;
 }
+
+
 
 /** MENU SIDE **/
 
@@ -128,12 +136,6 @@ footer div {
             flex-wrap: wrap;
             justify-content: center;
 */
-        }
-
-         .ret {
-        
-            
-            
         }
 
         .retter:nth-child(odd) {
@@ -156,7 +158,6 @@ footer div {
             text-transform: lowercase;
                 margin-left: 1vw;
                 cursor: pointer;
-            
             }
 
 .filter:hover {
@@ -206,6 +207,10 @@ footer div {
     display: block;
     margin: auto;
 }
+#indhold .ret img {
+    width: 50%;
+    float: right;
+}
 
 .knapper {
     position: absolute;
@@ -213,12 +218,39 @@ footer div {
     right: 2vw;
 }
 
-article.ret {
-    
+/* CONTACT **/
+
+.container_about {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
 }
 
-/** OVERLAY **/
-
+.contact {
+   margin: 2vw 8vw 2vw 3vw;
+}
+.book {
+   
+    text-align: center;
+    padding: 3vw 5vw 3vw 5vw;
+    background-color: #fafafa;
+    margin: 3vw 5vw 3vw 0; 
+    
+}
+.book p {
+    margin-bottom: 3vw;
+}
+.book a {
+    background-color: #0c0c0c;
+    padding: 7px;
+    font-family: helvetica;
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: 100;
+    font-size: 0.7rem;
+}
 
 
 @media only screen and (min-width:910px) {
@@ -245,8 +277,15 @@ article.ret {
         display: block;
         text-align: right;
         margin-bottom: 1rem;
-        background-color: white;
-        background-opacity: 0.5;
+    }
+    #menu {
+        background-color: rgba(250, 250, 250, 0.4);
+        margin-top: -7vw;
+        padding-top: 2.5vw;
+       
+    }
+    menu-button {
+        
     }
 }
 
