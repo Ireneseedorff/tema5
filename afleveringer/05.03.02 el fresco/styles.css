@@ -241,6 +241,13 @@ article.ret {
     .filter {
         margin: auto;
     }
+    #menu a {
+        display: block;
+        text-align: right;
+        margin-bottom: 1rem;
+        background-color: white;
+        background-opacity: 0.5;
+    }
 }
 
 
