@@ -36,7 +36,7 @@ function toggleMenu() {
             let dest = document.querySelector("#liste");
 
             async function getJson() {
-                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1l94dBfaWqqmgz6Dwoxwh3YBV9PEFDsUnnh1A6TPIzbw");
+                let jsonData = await fetch("json.json");
                 alleRetter = await jsonData.json();
                
                 visRetter();
@@ -62,7 +62,7 @@ function toggleMenu() {
                             document.querySelector("#indhold").innerHTML = `
                          <article class="ret">
                     <img src="elfresco_mad/${ret.billede}.jpg" alt="${ret.titel}">
-                    <h2>${ret.titel}</h2>
+                    <h2>${ret.titel}</h2><br>
             <p>${ret.kortbeskrivelse}</p>
                 <p>Pris: ${ret.pris},-</p>
                     </article>

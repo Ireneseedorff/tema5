@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "titel": "Pork chicharron",
+    "billede": 2,
+    "kortbeskrivelse": "Fried pork skin and chile de arbol salsa",
+    "pris": 65,
+    "kategori": "forret"
+  },
+  {
+    "id": 2,
+    "titel": "Salmon Tostada",
+    "billede": 3,
+    "kortbeskrivelse": "Crispy tortilla, smoked salmon, crema, red onion and jalapeno",
+    "pris": 65,
+    "kategori": "forret"
+  },
+  {
+    "id": 3,
+    "titel": "Tuna Tostada",
+    "billede": 4,
+    "kortbeskrivelse": "Crispy Tortilla, raw tuna marinated in charred habanero salsa, guacamole",
+    "pris": 75,
+    "kategori": "forret"
+  },
+  {
+    "id": 4,
+    "titel": "Empanada",
+    "billede": 5,
+    "kortbeskrivelse": "Crispy tortillas filled with cheese with jalapeno salsa and chilli oil.",
+    "pris": 65,
+    "kategori": "forret"
+  },
+  {
+    "id": 5,
+    "titel": "Octopus Tostada",
+    "billede": 6,
+    "kortbeskrivelse": "Octopus grilled in al pastor, fresh avocado, cured egg yolk sauce.",
+    "pris": 85,
+    "kategori": "forret"
+  },
+  {
+    "id": 6,
+    "titel": "Horchata",
+    "billede": 7,
+    "kortbeskrivelse": "Mexican rice and almond drink",
+    "pris": 95,
+    "kategori": "drink"
+  },
+  {
+    "id": 7,
+    "titel": "Michelada",
+    "billede": 8,
+    "kortbeskrivelse": "Mexican beer with tomato",
+    "pris": 95,
+    "kategori": "drink"
+  },
+  {
+    "id": 8,
+    "titel": "Sweet Corn Tart",
+    "billede": 9,
+    "kortbeskrivelse": "Corn cream, fresh cheese and blueberries",
+    "pris": 95,
+    "kategori": "dessert"
+  },
+  {
+    "id": 9,
+    "titel": "Open churro sandwich",
+    "billede": 10,
+    "kortbeskrivelse": "Churro, frozen parfait and bitter cream",
+    "pris": 95,
+    "kategori": "dessert"
+  },
+  {
+    "id": 10,
+    "titel": "Lamb Barbacoa",
+    "billede": 11,
+    "kortbeskrivelse": "3 handmade corn tortillas with organic marinated meat and salsa borracha, onion and coriander",
+    "pris": 145,
+    "kategori": "hovedret"
+  },
+  {
+    "id": 11,
+    "titel": "Mushroom and jalapeño taco",
+    "billede": 12,
+    "kortbeskrivelse": "2 handmade tortillas served with jalapeño, king oyster mushroom, pasilla salsa and grilled requeson",
+    "pris": 105,
+    "kategori": "hovedret"
+  }
+]
