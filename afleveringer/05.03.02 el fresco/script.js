@@ -11,7 +11,7 @@ function toggleMenu() {
     console.log("Toggle menu");
     document.querySelector("#menu").classList.toggle("hide");
 
-    let erSkjult = document.querySelector("#menu").classList.contains("hide")
+    let erSkjult = document.querySelector("#menu").classList.contains("hide");
 
     if (erSkjult == true) {
         //menuen er skjult - ændr menuknap til lll

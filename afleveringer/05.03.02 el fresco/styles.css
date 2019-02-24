@@ -283,7 +283,7 @@ input {
     padding: 7px;
     font-family: helvetica;
     text-decoration: none;
-    color: #fafafa;
+    color: #0c0c0c;
     margin: 2vw 0 1vw 0;
         
 }
@@ -305,6 +305,10 @@ font-weight: 100;
     text-align: left;
     margin: 3vw 0 1vw 5vw;
     font-weight: 500;
+}
+
+.om {
+    margin: 3vw 40vw 3vw 4vw;
 }
 
 @media only screen and (min-width:910px) {
@@ -353,11 +357,12 @@ font-weight: 100;
     }
     
      #popup {
-         width: 100vw;
+         justify-content: center;
+        padding: 0vw;
+        margin-left: -10vw;
+         width: 80vw;
          height: 70vw;
-         z-index: 1;
-         margin: 0 0 0 -20vw;
-         padding: 0;
+         
         }
 
     #liste {
@@ -365,19 +370,19 @@ font-weight: 100;
         padding: 0;
     }
     #indhold {
-        margin: 0;
+        margin: 5vw 0 0 10vw;
     }
-    
-    #ret img {
-        width: 80%;
-    }
-    .knapper {
-        display: block;
-        margin: auto;
-        float: none;
-    }
-    
 
+    .knapper {
+        right: 6vw;
+    }
+   
+    #luk button {
+         top: 0;
+    }
+    .om {
+    margin: 2vw 7vw 2vw 7vw;
+}
 }
 
 
