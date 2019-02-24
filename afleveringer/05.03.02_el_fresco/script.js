@@ -38,7 +38,7 @@ function toggleMenu() {
             async function getJson() {
                 let jsonData = await fetch("json.json");
                 alleRetter = await jsonData.json();
-               
+
                 visRetter();
             }
 
@@ -48,7 +48,7 @@ function toggleMenu() {
                 alleRetter.forEach(ret => {
                     //console.log(ret.titel)
                     if (filter == "alle" || filter == ret.kategori) {
-                            
+
                         let template = `
                             <article class="ret">
                             <img src="elfresco_mad/${ret.billede}.jpg" alt="${ret.titel}">

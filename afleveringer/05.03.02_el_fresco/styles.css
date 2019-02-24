@@ -5,7 +5,7 @@ body {
 
 p {
    font-family: helvetica;
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
     line-height: 1.6;
 }
 .splash {
@@ -17,21 +17,21 @@ p {
 
 header img {
     width: 30%;
-    margin-left: 4vw; 
+    margin-left: 4vw;
     margin-top: 3vw;
-    padding-bottom: 5vw; 
+    padding-bottom: 5vw;
 }
 
 header nav {
-    float: right; 
+    float: right;
     margin-top: 7vw;
-    margin-right: 3vw;       
+    margin-right: 3vw;
 }
 
-header { 
+header {
   background-color: #fafafa;
     position: relative;
-    
+
 }
 
 h5 {
@@ -39,12 +39,12 @@ h5 {
     font-size: 0.5rem;
     font-weight: 500;
     margin: 0;
-    
+
 }
 
 #menu a {
-    text-decoration: none; 
-    margin-right: 2vw; 
+    text-decoration: none;
+    margin-right: 2vw;
     color: #3f3fe6;
     font-family: helvetica;
     font-size: 1rem;
@@ -59,7 +59,7 @@ h5 {
 
 .forside {
     background-color: #fafafa;
-        height: 55vw; 
+        height: 55vw;
     background-image: url("materiale/splashbillede.jpg");
         background-size: 100%;
     background-repeat: no-repeat;
@@ -77,17 +77,17 @@ h5 {
     font-family: helvetica;
     font-style: italic;
 }
-  
+
 .billede_forside img {
     width: 100%;
-    margin: 0; 
+    margin: 0;
     padding: 0;
-   
-   
+
+
 }
- 
+
 footer {
-    background-color: #f4d7d7; 
+    background-color: #f4d7d7;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -104,11 +104,11 @@ h2 {
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
-    
+
 }
 footer p {
     font-size: 0.7rem;
-     
+
 }
 footer p {
     margin-left: 2.2vw;
@@ -126,14 +126,14 @@ footer h5 {
     top: -10px;
     margin-top: -12vw;
     margin-right: 30px;
-   
+
 }
 .hide {
     visibility: hidden;
 }
 
 .billede_forside {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
@@ -145,7 +145,7 @@ footer h5 {
             display: grid;
             margin: 10px 50px 10px 50px;
             grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-    
+
         }
 
 
@@ -153,11 +153,11 @@ footer h5 {
             display: flex;
             justify-content: center;
              margin-top: 20px;
-            
+
         }
 
             .filter {
-            background: none; 
+            background: none;
             border: none;
             font-family: helvetica;
             font-size: 1rem;
@@ -196,16 +196,16 @@ footer h5 {
             box-sizing: border-box;
             text-align: right;
             padding-right: 1em;
-            
+
         }
 #luk img {
     width: 20%;
-   
+
 }
 
 #luk button {
      font-size: 1em;
-    background: none; 
+    background: none;
         border: none;
     margin: 1vw -2.7vw -1vw 0;
 }
@@ -247,8 +247,8 @@ footer h5 {
     text-align: center;
     padding: 0.6vw 5vw 3vw 5vw;
     background-color: #fafafa;
-    margin: 3vw 5vw 3vw 0; 
-    
+    margin: 3vw 5vw 3vw 0;
+
 }
 .book p {
     margin-bottom: 3vw;
@@ -276,7 +276,7 @@ footer h5 {
 }
 .bookbutton {
     padding: 3vw 5vw 3vw 5vw;
-    margin: 0 5vw 3vw 0; 
+    margin: 0 5vw 3vw 0;
 }
 
 input {
@@ -285,7 +285,7 @@ input {
     text-decoration: none;
     color: #0c0c0c;
     margin: 2vw 0 1vw 0;
-        
+
 }
 
 .formgroup h5 {
@@ -343,30 +343,30 @@ font-weight: 100;
         position: absolute;
         right: 0;
         top: 14.1vw;
-       
+
     }
     .menu-button img {
         margin-right: 4vw;
     }
     .contact {
-        margin: 5vw 4vw 5vw 4vw; 
+        margin: 5vw 4vw 5vw 4vw;
     }
     .book {
         margin: 5vw 0 8vw 0;
         padding: 2vw 7vw 8vw 7vw;
     }
-    
+
      #popup {
          justify-content: center;
         padding: 0vw;
         margin-left: -10vw;
          width: 80vw;
          height: 70vw;
-         
+
         }
 
     #liste {
-        margin: 0;   
+        margin: 0;
         padding: 0;
     }
     #indhold {
@@ -376,7 +376,7 @@ font-weight: 100;
     .knapper {
         right: 6vw;
     }
-   
+
     #luk button {
          top: 0;
     }
