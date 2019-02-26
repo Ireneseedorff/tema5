@@ -89,6 +89,7 @@ h5 {
     width: 100%;
     margin: 0;
     padding: 0;
+
 }
 
 footer {
@@ -128,12 +129,12 @@ footer h5 {
 }
 
 .menu-button img{
-    width: 35px;
+    width: 15vw;
     position: relative;
-    left: 86vw;
-    top: -3vw;
-    margin-top: -12vw;
-    margin-right: 20px;
+    left: 83vw;
+    top: -6vw;
+    margin-top: -10vw;
+
 
 }
 .hide {
@@ -367,28 +368,31 @@ font-weight: 100;
     #menu a {
         display: block;
         text-align: right;
-        margin-bottom: 1rem;
+        margin-bottom: 3vw;
         color: #fafafa;
         font-weight: 200;
+        margin-right: 0;
 
     }
     #menu a:hover {
         border: none;
         font-weight: 200;
+        color: #b44647;
     }
     #menu {
         background-color: #3f3fe6;
-
         margin-top: -1vw;
-        padding-top: 1vw;
+        padding: 3vw 1vw 0 1vw;;
         position: absolute;
-        right: 0;
+        right: 4vw;
         top: 14.1vw;
+        margin-bottom:
 
     }
-    .menu-button img {
-        margin-right: 4vw;
+     .menu-button {
+        margin-left: -5vw;
     }
+
     .contact {
         margin: 5vw 4vw 5vw 4vw;
     }
@@ -398,11 +402,11 @@ font-weight: 100;
     }
 
      #popup {
-         justify-content: center;
+        left: auto;
+
         padding: 0vw;
-        margin-left: -10vw;
-         width: 80vw;
-         height: 70vw;
+          width: 100vw;
+         height: 100vw;
 
         }
 
@@ -411,7 +415,14 @@ font-weight: 100;
         padding: 0;
     }
     #indhold {
-        margin: 5vw 0 0 10vw;
+        width: auto;
+        margin: 0 3vw 0 3vw;
+
+    }
+    #popup h2 {
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: left;
     }
 
     .knapper {
@@ -420,6 +431,8 @@ font-weight: 100;
 
     #luk button {
          top: 0;
+        padding: 0;
+        margin: 0 -13vw 0 0;
     }
     .om {
     margin: 2vw 7vw 2vw 7vw;
@@ -430,12 +443,23 @@ font-weight: 100;
     margin: auto;
     margin-bottom: 8vw;
     display: block;
-
-
 }
     .om {
     padding: 0;
 }
+    .ret {
+        margin: 0 0 4vw;
+
+    }
+    .ret img {
+        width: 87%
+    }
+
+
+    #luk img {
+        width: 40%;
+
+    }
 
 }
 

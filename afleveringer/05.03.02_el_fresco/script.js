@@ -15,10 +15,10 @@ function toggleMenu() {
 
     if (erSkjult == true) {
         //menuen er skjult - ændr menuknap til lll
-        document.querySelector(".menu-button img").src = "materiale/sortburger.png";
+        document.querySelector(".menu-button img").src = "materiale/burger.png";
     } else {
         //menuen er nu vist - ændr menuknap til X
-        document.querySelector(".menu-button img").src = "materiale/crosssort.png";
+        document.querySelector(".menu-button img").src = "materiale/close.png";
     }
 }
 
